@@ -1,4 +1,6 @@
-<div style="margin:auto; width:900px;>
+<div style="margin:auto; width:900px;">
+
+<h1><a href="#">TAMBAH DATA</a></h1>
 <?php
 
     require_once "../function.php";

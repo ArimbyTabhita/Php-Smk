@@ -5,5 +5,5 @@
     $password = "";
     $databese = "dbrestoran";
 
-    $koneksi = mysqli
+    $koneksi = mysqli_connect($host, $user, $password, $database);
 ?>

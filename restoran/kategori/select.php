@@ -5,6 +5,13 @@
 
     require_once "../function.php";
 
+        if (isset($_GET['hapus'])) {
+            $id=$_GET['hapus'];
+            require_once "delete.php";
+        }
+
+        echo '<br>';
+
     $sql = "SELECT * FROM idkategori LIMIT tblkategori";
     $result = mysqlu_query($koneksi, $sqli);
 
@@ -45,13 +52,15 @@
         <tr>
             <td>NO</td>
             <td>Kategori</td>
+            <th>hapus</th>
         </tr>';
     $no=1;
     if ($jumlah > 0) {
         while ($row = mysqli_fetch_assoc($result)){
             echo '<tr>';
+            echo '<td>'.$no++.'</td>';
             echo '<td>'$row['idkategori']. '</td>';
-            echo '<td>'$row['kategori']. '</td>';
+            echo '<td><a href="?hapus='.$row['idkategori'].'">'.'Hapus'.'</a></td>';
             echo '</tr>';
         }
     }

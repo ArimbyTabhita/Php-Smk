@@ -4,7 +4,7 @@ $banyak = 4;
 
 $halaman = ceil($jumlahdata / $banyak);
 
-f (isset($_GET['p'])) {
+if (isset($_GET['p'])) {
     $p=$_GET['p'];
     $mulai = ($p * $banyak) - $banyak;
 
@@ -15,11 +15,11 @@ f (isset($_GET['p'])) {
     $sql = "SELECT * FROM tblkategori ORDER BY kategori ASC LIMIT  $mulai,$banya";
     $row = $db->getALL($sql);
     $no=1+$mulai;
-
-
-
 ?>
 
+<div class="float-left mr-4">
+    <a class="btn btn-primary" href="?f=kategori&m=insert" role="button">TAMBAH DATA</a>
+</div>
 <h3>Kategori</h3>
 
     <table class="table table-bordered w-50">
@@ -36,8 +36,8 @@ f (isset($_GET['p'])) {
             <tr>
                 <td><?php echo $no++?></td>
                 <td><?php echo $r['kategori']?></td>
-                <td><?php echo $r['kategori']?></td>
-                <td><?php echo $r['kategori']?></td>
+                <td><a href="?f=kategori&m=delete&id=<?php echo $r['idkategori']?>">Delete</a></td>
+                <td><a href="?f=kategori&m=update&id=<?php echo $r['idkategori']?>">Update</a></td>
             </tr>
             <?php endforeach?>
         </tbody>

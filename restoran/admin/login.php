@@ -51,12 +51,13 @@
         $count = $db->rowCOUNT($sql);
 
             if ($count == 0) {
-                echo "<h3>EMAIL atau PASSWORD salah</h3>";
+                echo "<center><h3>EMAIL atau PASSWORD salah</h3></center>";
             }else{
                 $sql ="SELECT * FROM tbluser WHERE email='$email' AND $password";
                 $row=$db->getITEM($sql);
                 $_SESSION['user']=$row['email'];
                 $_SESSION['level']=$row['level'];
+                $_SESSION['iduser']=$row['iduser'];
 
                 header("location:index.php");
             }

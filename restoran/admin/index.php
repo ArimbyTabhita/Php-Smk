@@ -6,6 +6,10 @@
     if (isset($_SESSION['user'])) {
         header("location:login.php");
     }
+    if (isset($_GET['log'])) {
+        session_destroy();
+        header("location:index.php");
+    }
 
 ?>
 
@@ -28,7 +32,7 @@
             </div>
 
             <div class="col-md-9">
-                <div class="float-right mt-4">Logout</div>
+                <div class="float-right mt-4"><a href="?lOG=logout">Logout</a></div>
                 <div class="float-right mt-4 mr-4">User</div>
 
 

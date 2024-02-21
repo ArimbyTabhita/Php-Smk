@@ -8,7 +8,6 @@
 
             $where = "WHERE idkategori = $id";
             $id = "&id=".$id;
-            echo $where;
         }else{
             $where = "";
             $id = "";

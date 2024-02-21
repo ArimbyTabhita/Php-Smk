@@ -20,7 +20,7 @@
 
         <div class="row">
             <div class="col-md-3">
-                <h2>Restoran SMENDA</h2>
+                <h2><a href="index.php">Restoran SMENDA</a></h2>
             </div>
 
             <div class="col-md-9">
@@ -41,7 +41,7 @@
                 <ul class="nav flex-column">
                     
                     <?php foreach($row as $r):?>
-                    <li class="nav-item"><a class="nav-link"href=""><?php echo $r['kategori']?></a></li>
+                    <li class="nav-item"><a class="nav-link"href="?f=home&m=produk&id=<?php echo $r['idkategori']?>"><?php echo $r['kategori']?></a></li>
                     <?php endforeach?>
                 </ul>
                 <?php }?>

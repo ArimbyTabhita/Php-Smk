@@ -16,7 +16,7 @@
         $cart = 0;
         
         foreach ($_SESION as $key => $value) {
-            if (($key<>'pelanggan' && $key<table> 'idpelanggan')) {
+            if (($key<>'pelanggan' && $key<> 'idpelanggan' && $key<> 'user' && $key<> 'level' && $key<> 'iduser')) {
                 $id = substr($key,1);
 
                 $sql = "SELECT * FROM tblmenu WHERE idmenu=$id";

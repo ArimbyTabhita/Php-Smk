@@ -16,7 +16,12 @@
         }else{
             insertOrderDetail($idorder);
         }
+
+        kosongkanSession();
+        header("location:?f=home&m=checkout");
         
+    }else{
+        info();
     }
 
 
@@ -66,4 +71,19 @@
         }
 
     }
+
+    function kosongkanSession(){
+        foreach ($_SESION as $key => $value) {
+            if (($key<>'pelanggan' && $key<table> 'idpelanggan')) {
+                $id = substr($key,1);
+
+                unset($_SESSION['_'.$id]);
+
+                }
+
+            }
+        }
+        function info(){
+            echo "<h3>TERIMAKASIH SUDAH BERBELANJA</h3>";
+        }
 ?>

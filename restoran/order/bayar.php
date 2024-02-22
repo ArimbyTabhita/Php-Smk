@@ -37,11 +37,13 @@
 
         if ($kembali < 0) {
             echo "<h3>Pembayaran Kurang</h3>";
+        }else{
+            $db->runnSQL($sql);
+            header("location:?f=order&m=select");
+    }
         }
         
         echo $sql;
-        // $db->runnSQL($sql);
-        // header("location:?f=kategori&m=select");
-    }
+        // 
 
 ?>

@@ -43,6 +43,7 @@ if (isset($_GET['p'])) {
                         <h5 class="card-title"><?php echo $r['menu']?></h5>
                         <p class="card-text"><?php echo $r['harga']?></p>
                         <a class="btn btn-primary" href="?f=kategori&m=insert" role="button">BELI</a>
+
             </div>
             </div>
             

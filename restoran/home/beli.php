@@ -9,7 +9,8 @@ if (isset($_GET['hapus'])) {
 
     if (isset($_GET['tambah'])) {
         $id = $_GET['tambah'];
-        $_SESSION['_'.$id]++; 
+        $_SESSION['_'.$id]++;
+       
     }
     if (isset($_GET['kurang'])) {
         $id = $_GET['kurang'];
@@ -32,6 +33,10 @@ if (isset($_GET['hapus'])) {
 
     
     }
+
+
+
+
 
     function isi($id){
         if (isset($_SESSION['_'.$id])) {
@@ -63,7 +68,7 @@ if (isset($_GET['hapus'])) {
         
         ';
         foreach ($_SESSION as $key => $value) {
-            if ($key<>'pelanggan' && $key<> 'idpelanggan' && $key<> 'user' && $key<> 'level' && $key<table> 'iduser') {
+            if ($key<>'pelanggan' && $key<table> 'idpelanggan') {
                 $id = substr($key,1);
 
                 $sql = "SELECT * FROM tblmenu WHERE idmenu=$id";
@@ -90,13 +95,11 @@ if (isset($_GET['hapus'])) {
 
             <td colspan=4><h3>GRAND TOTAL : </h3></td>
             <td><h3>'.$total.'</h3></td>
-            </tr>';
+        </tr>';
 
         echo '</table>';
     }
-    function info(){
-        echo "<h2>Terimakasih telah membeli</h2>"
-    }
+
 
 ?>
 

@@ -39,16 +39,17 @@
     if (isset($_POST['simpan'])) {
         $user = $_POST['user'];
         $email = $_POST['email'];
-        $password = $_POST['password'];
-        $konfirmasi = $_POST['konfirmasi'];
+        $password = hash('sha256'$_POST['password']); 
+        $konfirmasi = hash('sha256'$_POST['konfirmas']);
         $level = $_POST['level'];
 
 
         if ($password === $konfirmasi) {
             $sql = "INSERT INTO tbluser VALUES ('','$user','$email','$password','$level',1)";
-            echo $sql;
-            $db->runnSQL($sql);
-            header("location:?f=user&m=select");
+            
+
+             $db->runnSQL($sql);
+             header("location:?f=user&m=select");
         }else{
             echo "<h2>PASSWORD TIDAK SAMA DENGAN KONFIMASII</h2>";
         }

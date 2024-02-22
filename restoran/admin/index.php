@@ -63,13 +63,12 @@
                             case'kasir':
                                 echo'
                                 <li class="nav-item"><a class="nav-link"href="?f=order&m=select">Order</a></li>
-                    <li class="nav-item"><a class="nav-link"href="?f=orderdetail&m=select">Order Detail</a></li>
+                                <li class="nav-item"><a class="nav-link"href="?f=orderdetail&m=select">Order Detail</a></li>
                                 ';
                                 break;
                                 case'koki':
                                     echo'
-
-                        <li class="nav-item"><a class="nav-link"href="?f=orderdetail&m=select">Order Detail</a></li>
+                                    <li class="nav-item"><a class="nav-link"href="?f=orderdetail&m=select">Order Detail</a></li>
                                     ';
                                     break;
                         
